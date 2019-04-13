@@ -10,8 +10,8 @@ var articles= [];
 
 //WHAT TO DO
 // TODO: get the search term
-function getArticle (searchTerm) {
-   var query = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ searchTerm + "&api-key=" + apiKey; 
+function getArticle (searchTerm, startYear, endYear) {
+   var query = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ searchTerm + "&fq=pub_year:([" + startYear + " TO " + endYear + "])&api-key=" + apiKey; 
     $.ajax( {
         url: query,
         method: "GET"
@@ -47,7 +47,9 @@ function pouplateResults(max){
     }
 }
 
-getArticle("sacramento");
+
+
+getArticle("sacramento", 2015, 2016);
 
 // TODO: make an api call
 // TODO: display the results
