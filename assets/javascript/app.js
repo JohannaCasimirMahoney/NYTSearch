@@ -3,6 +3,7 @@
 var apiKey = "8KbVOhLYhgRAMCKLxPTpkfNcq3fBPCVj";
 // apiURL
 // search term
+var articles= [];
 
 
 //WHAT TO DO
@@ -13,9 +14,16 @@ function getArticle (searchTerm) {
         url: query,
         method: "GET"
     }).then(function(response){
-        console.log(response);
+        searchResults = response.response.docs;
+        $.each(searchResults, function(i, article){
+            console.log(article);
+            console.log(article.headline.main);
+            console.log(article.pub_date);
+        });
+        
     });
 }
+
 getArticle("sacramento");
 // TODO: make an api call
 // TODO: display the results
