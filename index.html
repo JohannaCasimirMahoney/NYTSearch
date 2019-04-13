@@ -1,79 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NY Times Search</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NY Times Search</title>
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Awesome fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <!-- Awesome fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <!-- Our stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1><span class="fa fa-newspaper-o"></span> New York Times Search</h1>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        Search Parameters
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1><span class="fa fa-newspaper-o"></span> New York Times Search</h1>
       </div>
-      <div class="card-body">
-        <form id="movie-form">
 
-          <div class="card">
-            <div class="card-header">
-              <span class="fa fa-table"></span> Search Parameters
+      <div class="card">
+        <div class="card-header">
+          <span class="fa fa-table"></span> Search Parameters
+        </div>
+        <div id="user-input" class="card-body">
+          <form id="movie-form">
+            <div class="box0">
+              <label for="movie-input">Search Term:</label><br />
+              <input type="text" id="movie-input" /><br />
             </div>
-            <div id="user-input" class="card-body">
-              <form id="movie-form">
-                <div class="box0">
-                  <label for="movie-input">Search Term:</label><br>
-                  <input type="text" id="movie-input" /><br />
-                </div>
 
-                <div class="box0">
-                  <label for="movie-input">Number of Records to Retrieve:</label><br>
-                  <input type="text" id="movie-input" /><br />
-                </div>
+            <div class="box0">
+              <label for="movie-input">Number of Records to Retrieve:</label
+              ><br />
+              <input type="text" id="movie-input" /><br />
+            </div>
 
-                <div class="box0">
-                  <label for="movie-input">Start Year (Optional):</label><br>
-                  <input type="text" id="movie-input" /><br />
-                </div>
+            <div class="box0">
+              <label for="movie-input">Start Year (Optional):</label><br />
+              <input type="text" id="movie-input" /><br />
+            </div>
 
-                <div class="box0">
-                  <label for="movie-input">Search Term:</label><br>
-                  <input type="text" id="movie-input" /><br />
-                </div>
-
-              </form>
-              <!-- Button triggers new movie to be added -->
-              <button class="fa fa-search" id="add-movie" type="submit" value="Search"> Search</button>
-              <!-- Button triggers new movie to be added -->
-              <button class="fa fa-trash" id="add-movie" type="submit" value="Clear Results"> Clear Results</button>
-        </form>
+            <div class="box0">
+              <label for="movie-input">Search Term:</label><br />
+              <input type="text" id="movie-input" /><br />
+            </div>
+          </form>
+          <!-- Button triggers new movie to be added -->
+          <button
+            class="fa fa-search"
+            id="add-movie"
+            type="submit"
+            value="Search"
+          >
+            Search
+          </button>
+          <!-- Button triggers new movie to be added -->
+          <button
+            class="fa fa-trash"
+            id="add-movie"
+            type="submit"
+            value="Clear Results"
+          >
+            Clear Results
+          </button>
+        </div>
       </div>
     </div>
-    <div class="card">
 
-
-    </div>
-
-
-  </div>
-  </div>
-
-  <!-- Sources jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/javascript/app.js"></script>
-</body>
-
+    <!-- Sources jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
 </html>
